@@ -3,14 +3,14 @@ from mcpi.minecraft import Minecraft
 from .blocks import get_block_name
 
 
-def standing_on_block():
+def staan_op_blok():
     pos = mc.player.getTilePos()
-    block_id = mc.getBlock(pos.x, pos.y - 1, pos.z)
-    block_name = get_block_name(block_id)
-    mc.postToChat("Standing on Block: %s" % (block_name, ))
+    blok_id = mc.getBlock(pos.x, pos.y - 1, pos.z)
+    blok_naam = get_block_name(blok_id)
+    mc.postToChat("Ik sta op %s" % (blok_naam, ))
 
 if __name__ == '__main__':
     mc = Minecraft.create()
     while True:
-        standing_on_block(mc)
+        staan_op_blok(mc)
         sleep(1)
